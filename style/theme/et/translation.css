@@ -20,3 +20,10 @@
 	background-image: url("button_edit.png");
 	width: 75px;
 }
+
+/*
+	Online icon
+*/
+.phpbb .online .poster-avatar {
+	background-image: url("online.png");
+}

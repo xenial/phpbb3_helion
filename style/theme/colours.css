@@ -524,8 +524,11 @@ body.simple {
 	font-weight: normal;
 	color: #606060;
 }
-.phpbb .profile .poster-avatar.empty {
+.phpbb .profile .poster-avatar.empty span {
 	background-image: url("{T_THEME_PATH}/images/avatar.png");
+}
+.phpbb .online .poster-avatar {
+	background-image: url("{T_THEME_PATH}/images/online.png");
 }
 .phpbb .post-content-wrap > .postbody {
 	border-color: #e8e8e8;
