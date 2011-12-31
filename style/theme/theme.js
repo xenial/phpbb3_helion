@@ -277,9 +277,9 @@ $(document).ready(function()
 		Toggle forums
 	*/
 	phpBB.hiddenForums = phpBB.getCookie('hidden');
-	if(phpBB.hiddenForums == null)
+	if(phpBB.hiddenForums == null || phpBB.hiddenForums == '')
 	{
-		phpBB.hiddenForums = [];
+		phpBB.hiddenForums = [(phpBB.domain == 'forum.artodia.com') ? 8 : 9];
 	}
 	else
 	{
