@@ -699,16 +699,13 @@
 	padding-top: 0;
 	white-space: nowrap;
 }
-.phpbb .postprofile dd.poster-online {
-	text-align: center;
-	padding-top: 4px;
-}
 .phpbb .poster-avatar {
 	text-align: center;
 	margin: 4px 10px 4px 6px;
 	padding: 4px 0 0;
 }
-.phpbb .poster-avatar.empty {
+.phpbb .poster-avatar.empty span {
+	display: block;
 	min-height: 90px;
 	min-width: 90px;
 	background: transparent none 50% 0 no-repeat;
@@ -719,8 +716,14 @@
 	-o-transition: opacity 0.25s ease;
 	-ms-transition: opacity 0.25s ease;
 }
-.phpbb .post:hover .poster-avatar.empty {
+.phpbb .post:hover .poster-avatar.empty span {
 	opacity: 1;
+}
+
+.phpbb .online .poster-avatar {
+	padding-top: 16px;
+	min-width: 90px;
+	background: transparent none 50% 0 no-repeat;
 }
 
 .phpbb .postbody h3, .phpbb .content h2:first-child {

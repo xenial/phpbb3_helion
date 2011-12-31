@@ -138,14 +138,12 @@
 
 			<!-- IF postrow.RANK_TITLE or postrow.RANK_IMG --><dd class="poster-rank"><!-- IF postrow.RANK_IMG -->{postrow.RANK_IMG}<!-- ELSE -->{postrow.RANK_TITLE}<!-- ENDIF --></dd><!-- ENDIF -->
 
-			<!-- IF postrow.ONLINE_IMG --><dd class="poster-online">{postrow.ONLINE_IMG}</dd><!-- ENDIF -->
-
 			<!-- IF postrow.POSTER_AVATAR -->
 			<dd class="poster-avatar">
 				<!-- IF postrow.U_POST_AUTHOR --><a href="{postrow.U_POST_AUTHOR}">{postrow.POSTER_AVATAR}</a><!-- ELSE -->{postrow.POSTER_AVATAR}<!-- ENDIF -->
 			</dd>
 			<!-- ELSE -->
-			<dd class="poster-avatar empty"></dd>
+			<dd class="poster-avatar empty"><span></span></dd>
 			<!-- ENDIF -->
 
 		<!-- IF postrow.POSTER_POSTS != '' --><dd><strong>{L_POSTS}:</strong> {postrow.POSTER_POSTS}</dd><!-- ENDIF -->
