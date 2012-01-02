@@ -67,8 +67,10 @@
 			<!-- ENDIF -->
 		</div>
 	</div>
-	&bull;
-	<a href="{U_REGISTER}" class="header-menu menu-register"><span>{L_REGISTER}</span></a>
+	<!-- IF not S_USER_LOGGED_IN and S_REGISTER_ENABLED and not (S_SHOW_COPPA or S_REGISTRATION) -->
+		&bull;
+		<a href="{U_REGISTER}" class="header-menu menu-register"><span>{L_REGISTER}</span></a>
+	<!-- ENDIF -->
 </div>
 <!-- ENDIF -->
 
