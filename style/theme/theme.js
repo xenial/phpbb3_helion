@@ -354,6 +354,8 @@ $(document).ready(function()
 	*/
 	if($('.phpbb .forum-wrapper').length)
 	{
+		phpBB.lastWidth = 0;
+		phpBB.lastHeight = 0;
 		phpBB.resizeContent();
 		$(window).on('resize load', function() { phpBB.resizeContent(); });
 	}
@@ -373,7 +375,25 @@ phpBB.resizeContent = function()
 	}
 	var diff = pageHeight - h;
 	h = Math.max(400, Math.floor($(window).height() - diff));
-	$('.phpbb .forum-wrapper').css('min-height', h + 'px');
+	if(h != phpBB.lastHeight)
+	{
+		if(phpBB.lastHeight == h) return;
+		phpBB.lastHeight = h;
+		$('.phpbb .forum-wrapper').css('min-height', h + 'px');
+	}
+	// Resize posts
+	if(phpBB.ie && phpBB.ie < 8) return;
+	var width = content.width();
+	if(width != phpBB.lastWidth)
+	{
+		phpBB.lastWidth = width;
+		var diff = $('.phpbb .layout-wrapper').width() - $('.phpbb .layout-wrapper > .layout-middle').width();
+		if(diff > 0)
+		{
+			diff = Math.floor(width - diff);
+			$('.phpbb .layout-middle > div').css('max-width', diff + 'px');
+		}
+	}
 };
 
 /*
