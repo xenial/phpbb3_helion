@@ -138,7 +138,7 @@
 	left: 30px;
 }
 
-.phpbb .buttons .reply-icon a span, .phpbb .buttons .pmreply-icon a span {
+.phpbb .buttons .reply-icon a span, .phpbb .buttons .pmreply-icon a span, .phpbb .buttons .locked-icon a span {
 	background-position: -30px -30px;
 }
 .phpbb .buttons .newpm-icon a span {
