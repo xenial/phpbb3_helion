@@ -12,6 +12,9 @@
 	border: 1px solid transparent;
 	background-position: 0 50%;
 }
+.phpbb textarea {
+	line-height: 1.4em;
+}
 .phpbb input[type="text"], .phpbb input[type="password"], .phpbb input[type="email"], .phpbb textarea, .phpbb input[type="submit"], .phpbb .button1, .phpbb .button2 {
 	-webkit-appearance: none;
 }
